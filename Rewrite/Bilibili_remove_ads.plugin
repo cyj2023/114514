@@ -11,6 +11,7 @@
 URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT-DICT
 URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 
+
 [Rewrite]
 # 开屏广告
 ^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? reject-dict
@@ -88,6 +89,7 @@ http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/g
 
 # 移除皮肤推送
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除皮肤推送
+
 
 [MitM]
 hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
